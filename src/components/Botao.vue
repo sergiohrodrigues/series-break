@@ -81,5 +81,9 @@
         section{
             margin-left: 0;
         }
+
+        span{
+            font-size: 2rem;
+        }
     }
 </style>

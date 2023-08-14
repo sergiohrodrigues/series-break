@@ -115,5 +115,13 @@ export default defineComponent({
       margin-left: 10%;
       justify-content: flex-start;
     }
+
+    h2{
+      font-size: 2rem;
+    }
+
+    button:hover{
+      cursor: pointer;
+    }
   }
 </style>

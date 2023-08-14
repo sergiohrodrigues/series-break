@@ -56,6 +56,18 @@
             padding: 2rem 1rem;
             margin-left: 0;
         }
+
+        span{
+            font-size: 2.5rem;
+        }
+
+        i{
+            font-size: 2rem;
+        }
+
+        button{
+            padding: 0.5rem;
+        }
     }
 
 </style>
