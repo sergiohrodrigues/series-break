@@ -3,7 +3,7 @@
         <span v-if="mudarExercicio">Voce está na {{ numeroDeSeries }}° série.</span>
         <span v-else style="text-align: center;">Exercicio finalizado,<br> clique em Mudar Exercicio.</span>
         <button class="descansar" v-if="tempoRodando" @click="iniciar" :disabled="tempoRodando || input == 0 || mudarExercicio === false" >{{ tempoEmSegundos }}</button>
-        <button class="descansar" v-else @click="iniciar" :disabled="tempoRodando || input == 0 || mudarExercicio === false">Descansar</button>
+        <button class="descansar" v-else @click="iniciar" :disabled="tempoRodando || input == 0 || mudarExercicio === false">Intervalo</button>
         <button class="novo-exercicio" :disabled="mudarExercicio" @click="functionMudarExercicio">Mudar Exercicio</button>
     </section>
 </template>
@@ -56,6 +56,9 @@
 </script>
 
 <style scoped>
+    section{
+        padding-top: 2rem;
+    }
     .descansar{
         background-color: green;
         border-radius: 50%;
@@ -63,8 +66,20 @@
         height: 150px;
         border: none;
         font-size: 1.5rem;
+        margin-top: 1rem;
     }
     .novo-exercicio{
-        margin-top: 1rem;
+        margin: 1rem 0 3rem 0;
+        padding: 0.5rem;
+    }
+
+    span{
+        font-size: 1.3rem;
+    }
+
+    @media screen and (min-width: 768px){
+        section{
+            margin-left: 0;
+        }
     }
 </style>
