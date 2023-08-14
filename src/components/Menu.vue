@@ -55,6 +55,7 @@
             justify-content: flex-start;
             padding: 2rem 1rem;
             margin-left: 0;
+            min-width: 284px;
         }
 
         span{
