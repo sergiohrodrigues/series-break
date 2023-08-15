@@ -4,7 +4,7 @@
         <span v-else style="text-align: center;">Exercicio finalizado,<br> clique em Mudar Exercicio.</span>
         <button class="descansar" v-if="tempoRodando" @click="iniciar" :disabled="tempoRodando || input == 0 || mudarExercicio === false" >{{ tempoEmSegundos }}</button>
         <button class="descansar" v-else @click="iniciar" :disabled="tempoRodando || input == 0 || mudarExercicio === false">Intervalo</button>
-        <button class="novo-exercicio" :disabled="mudarExercicio" @click="functionMudarExercicio">Mudar Exercicio</button>
+        <button class="novo-exercicio" :disabled="mudarExercicio" @click="functionMudarExercicio">Mudar Exercicio.</button>
     </section>
 </template>
 
