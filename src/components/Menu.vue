@@ -4,34 +4,32 @@
             <span>Series Break</span>
             <i class="fa-solid fa-dumbbell"></i>
         </div>
-        <button @click="ativarModoEscuro">{{ ativarBotao }}</button>
+        <ButtonDarkMode @darkModeIs="mudarTema"/>
+        <!-- <button @click="ativarModoEscuro">{{ ativarBotao }}</button> -->
     </section>
 </template>
 
 <script lang="ts">
     import { defineComponent } from 'vue';
+import ButtonDarkMode from './ButtonDarkMode.vue';
 
     export default defineComponent({
-        name: 'MenuC',
-        data(){
-            return{
-                modoEscuro: false,
-                ativarBotao: 'Ativar modo escuro'
-            }
-        },
-        emits:['temaAlterado'],
-        methods:{
-            ativarModoEscuro(){
-                this.modoEscuro = !this.modoEscuro
-                this.$emit('temaAlterado', this.modoEscuro)
-                if(this.modoEscuro){
-                    this.ativarBotao = 'Desativar modo escuro'
-                }else {
-                    this.ativarBotao = 'Ativar modo escuro'
-                }
-            }
+    name: 'MenuC',
+    data() {
+        return {
+            modoEscuro: false,
+            ativarBotao: 'Ativar modo escuro'
+        };
+    },
+    emits: ['temaAlterado'],
+    methods: {
+        mudarTema(darkModeIs: boolean){
+            this.modoEscuro = darkModeIs
+            this.$emit('temaAlterado', this.modoEscuro);
         }
-    })
+    },
+    components: { ButtonDarkMode }
+})
 </script>
 
 <style scoped>
